@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="cadastrarPacienteTest" project="Projeto_E2E" tests="1" started="1" failures="0" errors="1" ignored="0">
+  <testsuite name="Testes.cadastrarPacienteTest" time="5.063" displayname="cadastrarPacienteTest" uniqueid="[engine:junit-jupiter]/[class:Testes.cadastrarPacienteTest]">
+    <testcase name="cadastrarPaciente" classname="Testes.cadastrarPacienteTest" time="5.063" displayname="cadastrarPaciente()" uniqueid="[engine:junit-jupiter]/[class:Testes.cadastrarPacienteTest]/[method:cadastrarPaciente()]">
+      <error>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span&gt;...&lt;/span&gt; is not clickable at point (805, 30). Other element would receive the click: &lt;a href="/v2/patients" class=""&gt;...&lt;/a&gt;
+  (Session info: chrome=131.0.6778.109)
+Build info: version: '4.29.0', revision: '5fc1ec94cb'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f06a3fb3810403dc6104b9b392f8c79a, clickElement {id=f.E93BC2D4B1D82BAD2630970EB5FCF0D9.d.BC128637C61457AFF823F8102168B163.e.44}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 131.0.6778.109, chrome: {chromedriverVersion: 131.0.6778.264 (2d05e315153..., userDataDir: C:\Users\User_ADM\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62835}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62835/devtoo..., se:cdpVersion: 131.0.6778.109, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (f06a3fb3810403dc6104b9b392f8c79a)] -&gt; xpath: //span[text()='Pacientes']]
+Session ID: f06a3fb3810403dc6104b9b392f8c79a&#13;
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)&#13;
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)&#13;
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)&#13;
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)&#13;
+	at MetodosDeTeste.Metodos.esperarElementoSerClicavel(Metodos.java:54)&#13;
+	at Pages.CadastrarPacientePage.cadastrarPaciente(CadastrarPacientePage.java:50)&#13;
+	at Testes.cadastrarPacienteTest.cadastrarPaciente(cadastrarPacienteTest.java:31)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)&#13;
+&#13;
+</error>
+    </testcase>
+  </testsuite>
+</testrun>

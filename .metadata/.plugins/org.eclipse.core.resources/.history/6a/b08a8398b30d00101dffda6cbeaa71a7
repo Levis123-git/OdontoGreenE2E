@@ -1,0 +1,29 @@
+package Testes;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import MetodosDeTeste.Metodos;
+import Pages.CadastrarPacientePage;
+import Pages.LoginPage;
+import Runner.Executa;
+
+public class cadastrarPacienteTest {
+	
+	CadastrarPacientePage cadastrar = new CadastrarPacientePage();
+	Executa executa = new Executa();
+	Metodos metodo = new Metodos();
+	LoginPage logar = new LoginPage();
+
+	@BeforeEach
+	public void antesDoTest() {
+		executa.Setup();
+		logar.logar("teste@email.com.br", "teste@123");
+	}
+	@Test
+	public void cadastrarPaciente() {
+		cadastrar.cadastrarPaciente("teste", "11934125767", "email@teste.com");
+		
+	}
+	
+}

@@ -1,0 +1,15 @@
+package Testes;
+
+import Pages.CadastrarPacientePage;
+
+public class cadastrarPacienteTest {
+	
+	CadastrarPacientePage cadastrar = new CadastrarPacientePage();
+
+	
+	public void cadastrarPaciente() {
+		cadastrar.cadastrarPaciente("teste", "11934125767", "email@teste.com");
+		
+	}
+	
+}

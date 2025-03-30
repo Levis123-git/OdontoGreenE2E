@@ -1,0 +1,58 @@
+package Pages;
+
+import org.openqa.selenium.By;
+
+import MetodosDeTeste.Metodos;
+
+public class CadastrarPacientePage {
+
+	Metodos metodo = new Metodos();
+
+	private By btnPacientes = By.xpath("//span[text()='Pacientes']");
+	private By btn1Paciente = By.xpath("//span[text()=' Cadastrar o primeiro paciente ']");
+	private By nomeDoPaciente = By.xpath("//input[@placeholder='Nome do paciente']");
+	private By campoCelular = By.xpath("//input[@placeholder='(DDD) + Número']");
+	private By campoEmail = By.xpath("//input[@placeholder='email@paciente.com']");
+	private By campoStatus = By.xpath("//div[text()='Ativo'][1]");
+	private By campoOrigem = By.xpath("//div[text()='Aditivo de tratamento'][1]");
+
+	public void setBtnPacientes(By btnPacientes) {
+		this.btnPacientes = btnPacientes;
+	}
+
+	public void setBtn1Paciente(By btn1Paciente) {
+		this.btn1Paciente = btn1Paciente;
+	}
+
+	public void setNomeDoPaciente(By nomeDoPaciente) {
+		this.nomeDoPaciente = nomeDoPaciente;
+	}
+
+	public void setCampoCelular(By campoCelular) {
+		this.campoCelular = campoCelular;
+	}
+
+	public void setCampoEmail(By campoEmail) {
+		this.campoEmail = campoEmail;
+	}
+
+	public void setCampoStatus(By campoStatus) {
+		this.campoStatus = campoStatus;
+	}
+
+	public void setCampoOrigem(By campoOrigem) {
+		this.campoOrigem = campoOrigem;
+	}
+
+
+
+	public void cadastrarPaciente (String nomeDoPaciente,String celular,String campoEmail) {
+		metodo.esperarElementoSerClicavel(btnPacientes, 2);
+		metodo.clicar(btnPacientes);
+		metodo.esperarElementoSerClicavel(btn1Paciente, 2);
+		metodo.clicar(btn1Paciente);
+		
+	}
+	
+
+}

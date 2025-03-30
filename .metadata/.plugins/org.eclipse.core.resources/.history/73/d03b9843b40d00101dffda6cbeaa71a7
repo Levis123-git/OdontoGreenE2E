@@ -1,0 +1,13 @@
+package ElementosWeb;
+
+import org.openqa.selenium.By;
+
+public class Elementos {
+	
+	
+	public By btnPacientes = By.xpath("");
+	
+	
+	
+	
+}

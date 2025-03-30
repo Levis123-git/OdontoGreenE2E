@@ -1,0 +1,99 @@
+package MetodosDeTeste;
+
+
+
+
+public class Metodos extends Drivers{
+	
+	
+	public void escrever(By locator, String texto) {
+		try {
+			driver.findElement(locator).sendKeys(texto);
+		} catch (Exception e) {
+			throw new IllegalArgumentException("Não foi possivel localizar o elemento" + locator);
+		}
+			
+	}
+	public void clicar(By locator) {
+		try {
+			driver.findElement(locator).click();
+		} catch (Exception e) {
+			throw new IllegalArgumentException("Não foi possivel localizar o elemento" + locator);
+		}
+			
+	}
+	public void validarUrl(String urlEsperada) {
+		try {
+			String urlCapturada = driver.getCurrentUrl();
+			assertEquals(urlCapturada, urlEsperada);
+			if(urlCapturada.equals(urlEsperada)) {
+				System.out.println("As url´s Coincidem");
+			}else {
+				System.err.println("As url´s são diferentes");
+			}
+		} catch (Exception e) {
+			throw new NotFoundException("Url Não encontrada, Causa do erro;" + e.getCause());
+		}
+	}
+	public void esperarElementoSerClicavel(By locator, int tempoEspera) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(tempoEspera));
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
+		element.click();
+
+	}
+	public void esperarElementoSerVisivel(By locator, int tempoEspera) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(tempoEspera));
+		WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+		element.click();
+
+	}
+	public void validarMsgElemento(By locator, String msgEsperada) {
+		try {
+			String msgCapturada = driver.findElement(locator).getText();
+			assertEquals(msgCapturada, msgEsperada);
+			if(msgCapturada.contains(msgEsperada)) {
+				System.out.println("As Mensagens são iguais");
+			}else {
+				System.err.println("As mensagens são DIFERENTES");
+			}
+		} catch (Exception e) {
+			throw new IllegalArgumentException("Não foi possivel localizar o elemento: " + locator );
+		}
+	}
+	public void esperarUrl(String urlEsperando, int tempoEspera) {
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(tempoEspera));
+			wait.until(ExpectedConditions.urlToBe(urlEsperando));
+		} catch (Exception e) {
+			throw new NotFoundException("Url Não encontrada, Causa do erro;" + e.getCause());
+		}
+		
+
+	}
+	public void validarMsgAlert(String msgEsperado) {
+		try {
+			String msgCapturada = driver.switchTo().alert().getText();
+			assertEquals(msgCapturada, msgEsperado);
+			if(msgCapturada.equals(msgEsperado)) {
+				System.out.println("As mensagens coincidem");
+			}else {
+				System.out.println("As mensagens são diferentes");
+			}
+		} catch (Exception e) {
+			throw new NotFoundException("Alert Não encontrado, Causa do erro;" + e.getCause());
+		}
+	}
+	public void esperar(int tempoEspera) {
+		try {
+			new WebDriverWait(driver, Duration.ofSeconds(tempoEspera));
+		} catch (Exception e) {
+			System.out.println("não foi possivel executar o método, causa do erro: " + e.getCause());
+			System.out.println("Mensagem do erro: " + e.getMessage());
+		}
+	}
+	
+	
+	}
+	
+	
+

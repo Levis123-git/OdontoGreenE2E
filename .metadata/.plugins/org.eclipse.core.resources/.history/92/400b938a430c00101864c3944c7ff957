@@ -1,0 +1,22 @@
+package Testes;
+
+import MetodosDeTeste.Metodos;
+import Pages.CadastrarPacientePage;
+import Runner.Executa;
+
+public class cadastrarPacienteTest {
+	
+	CadastrarPacientePage cadastrar = new CadastrarPacientePage();
+	Executa executa = new Executa();
+	Metodos metodo = new Metodos();
+
+	public void antesDoTest() {
+		
+	}
+	
+	public void cadastrarPaciente() {
+		cadastrar.cadastrarPaciente("teste", "11934125767", "email@teste.com");
+		
+	}
+	
+}
